@@ -1,23 +1,59 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ali nazari</title>
+    <link href="
+      https://cdn.jsdelivr.net/npm/sweetalert2@11.12.1/dist/sweetalert2.min.css
+      " rel="stylesheet">
     <link rel="stylesheet" href="./src/css/input.css">
   </head>
   <body class="font-sans dark:bg-gray-900 dark:text-white">
     <section class="container">
       <!-- header -->
-      <header class="grid w-3/4 grid-cols-1 mx-auto mt-10 lg:grid-cols-3 gap-x-4">
+      <header class="grid w-4/5 grid-cols-1 mx-auto mt-10 lg:grid-cols-3 gap-x-4">
         <!-- intro -->
         <section class="col-span-2 ">
           <p class="text-lg">Hi 👋🏻 , I'm</p>
-          <h1 class="text-3xl font-bold">Ali nazari</h1>
+          <div class="flex">
+            <h1 class="text-3xl font-bold">Ali nazari</h1>
+            <div class="flex items-center ml-auto space-x-1 md:order-2 md:space-x-0 rtl:space-x-reverse">
+              <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-900 rounded-lg cursor-pointer dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                <img width="15px" class="mr-2" src="/america flag.svg" alt="flag" loading="lazy">
+                En (US)
+              </button>
+              <!-- Dropdown -->
+              <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700" id="language-dropdown-menu">
+                <ul class="py-2 font-medium" role="none">
+                  <li>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                      <div class="inline-flex items-center">
+                        <img class="mr-2" width="15px" src="/america flag.svg" alt="flag" loading="lazy">
+                        En (US)
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                      <div class="inline-flex items-center">
+                        <img class="mr-2" width="20px" src="/iran flag.svg" alt="flag" loading="lazy">
+                        Fa (IR)
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <p class="mt-5 text-gray-400">I'm a Software Engineer building full-stack web applications with Svelte , Node.js, TypeScript,</p>
           <p class="text-gray-400">and PostgreSQL. I like to hang out in <a class="text-blue-500" href="https://discordapp.com/users/1047559485964681369" target="_blank">Discord</a> communities to help other developers, you will</p>
           <p class="text-gray-400">probably find me in <a class="text-blue-500" href="https://github.com/Silent-Watcher" target="_blank">Github</a> or <a class="text-blue-500" href="https://www.linkedin.com/in/alitte/" target="_blank">Linkedin</a></p>
           <p class="mt-5">📍 Earth  </p> 
+          <a download="#"  class="inline-flex cursor-pointer mt-5 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 items-center">
+            <svg class="fill-gray-300" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path></svg>
+            <span class="ml-2">Resume</span>
+          </a>
         </section>
         <!-- tools and tech -->
         <section class="w-full mt-10 text-center ">
@@ -52,17 +88,17 @@
         </section>
       </header>
       <!-- main -->
-      <section class="grid w-3/4 grid-cols-1 mx-auto mt-10 lg:grid-cols-3 gap-x-9">
+      <section class="grid w-4/5 grid-cols-1 mx-auto mt-5 lg:grid-cols-3 gap-x-9">
         <main class="col-span-2">
           <!-- about me -->
-          <section>        
+          <section class="mt-5 lg:mt-0">        
             <h2 class="font-bold">About me</h2>
             <div class="mt-5 text-gray-400">
               <p>My adventure in the computer world started when I entered university. At that time, I had a very difficult time figuring out which path I should choose. After a lot of struggling, I finally chose web programming.
                 I started working with PHP, and after three years of working on various projects, I switched my focus to JavaScript.
                 <span id="dots">...</span>
               </p>
-              <div id="more" class="hidden ">
+              <div id="more" class="hidden">
                 <p class="">The more I learned JavaScript, the more I became obsessed with this language and its capabilities. So, I decided to continue my professional journey with this language.</p>
                 <p>I’m passionate about problem-solving, team collaboration and being in a learning environment.</p>
                 <p>I see technology as more than a career path; it's the future I'm eager to help shape. My goal is not just to fill a position but to find a community where I can continue to grow, tackle meaningful projects, and leave a lasting impact.</p>
@@ -90,10 +126,6 @@
                 <img loading="lazy" src="/linkedin.svg" alt="linkedin">
                 <div class="ml-5">
                   <p class="font-bold">Explore Web Development with Node.js</p>
-                  <p class="text-sm text-gray-400">
-                    <span class="font-bold"> Credential id: </span>
-                    <span class="muted smaller">1fc24fa60bcead473654fa4b639cad577266ecbbd2ebd231198035d73f821b12</span>
-                  </p>
                 </div>
               </li>
               
@@ -101,10 +133,6 @@
                 <img loading="lazy" src="/linkedin.svg" alt="linkedin">
                 <div class="ml-5">
                   <p class="font-bold">Advance your Node.js Skills</p>
-                  <p class="text-sm text-gray-400">
-                    <span class="font-bold"> Credential id: </span>
-                    <span class="muted smaller">a7d94120f333ff323fe1c81f924a594657eacebba325694c5510ab66248bf431</span>
-                  </p>
                 </div>
               </li>
               
@@ -112,46 +140,39 @@
                 <img loading="lazy" src="/linkedin.svg" alt="linkedin">
                 <div class="ml-5">
                   <p class="font-bold">Essential New Skills in Software Engineering</p>
-                  <p class="text-sm text-gray-400">
-                    <span class="font-bold"> Credential id: </span>
-                    <span class="muted smaller">e1f3b68c2884e9198908699510793e13740b976bf1e97de685d9b8a919c4d468</span>
-                  </p>
                 </div>
               </li>
               
             </ul>
-       
           </section>
           <!-- projects -->
-           <section class="my-5">
+          <section class="my-10">
             <h2 class="mb-5 font-bold">Projects</h2>
             <ul class="divide-y-8 dark:divide-gray-900 ">
-              <li><a class="hover:text-blue-400" href="#">Express Shop</a></li>
-              <li><a class="hover:text-blue-400" href="#">Task manager</a></li>
-              <li><a class="hover:text-blue-400" href="#">1</a></li>
-              <li><a class="hover:text-blue-400" href="#">2</a></li>
+              <li><a class="hover:text-blue-400" href="https://github.com/Silent-Watcher/express-shop" target="_blank">Express Shop</a></li>
             </ul>
-           </section>
+            <p class="mt-2 text-xs font-bold text-gray-400">for more , please visit my github account 🤗</p>
+          </section>
         </main>
         <aside>
-          <form class="sticky top-2">
+          <form class="sticky top-2" id="contact_form">
             <div>
-                <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">display name</label>
-                <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required />
+                <label for="user_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">display name</label>
+                <input name="user_name" type="text" id="user_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required />
             </div>
             <div class="my-5">
               <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
-              <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required inputmode="email" />
+              <input name="email" type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required inputmode="email" />
             </div> 
             <div>
               <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subject</label>
               <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required />
             </div>
             <div class="my-5">
-              <label for="content" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">content</label>
-              <textarea name="content" id="content" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">message</label>
+              <textarea name="message" id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
             </div>
-            <button type="submit" class="mt-5 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button>
+            <button id="submitBtn" type="submit" class="mt-5 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button>
           </form>
         </aside>
       </section>
@@ -159,6 +180,11 @@
     <footer class="my-10 text-center">
       <p>2024 - Ali nazari &copy;</p>
     </footer>
+    <script src="
+      https://cdn.jsdelivr.net/npm/sweetalert2@11.12.1/dist/sweetalert2.all.min.js
+      "></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
