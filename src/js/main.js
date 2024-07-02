@@ -4,6 +4,8 @@ let toggle = document.querySelector('#toggleReadMore'),
   isExpanded = true;
 let PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const submitBtn = document.querySelector('#submitBtn')
+let year = document.getElementById('year');
+
 
 const Toast = Swal.mixin({
   toast: true,
@@ -31,6 +33,9 @@ emailjs.init({
 });
 
 window.addEventListener('load', () => {
+
+  year.innerHTML = new Date().getFullYear();
+
   document
     .querySelector('#contact_form')
     .addEventListener('submit', function (e) {
@@ -66,3 +71,4 @@ window.addEventListener('load', () => {
         });
     });
 });
+

@@ -9,10 +9,10 @@
       " rel="stylesheet">
     <link rel="stylesheet" href="./src/css/input.css">
   </head>
-  <body class="font-sans dark:bg-gray-900 dark:text-white">
+  <body class="font-sans select-none dark:bg-gray-900 dark:text-white">
     <section class="container">
       <!-- header -->
-      <header class="grid w-4/5 grid-cols-1 mx-auto mt-10 lg:grid-cols-3 gap-x-4">
+      <header class="grid w-5/6 grid-cols-1 mx-auto mt-10 lg:grid-cols-3 gap-x-4">
         <!-- intro -->
         <section class="col-span-2 ">
           <p class="text-lg">Hi 👋🏻 , I'm</p>
@@ -88,7 +88,7 @@
         </section>
       </header>
       <!-- main -->
-      <section class="grid w-4/5 grid-cols-1 mx-auto mt-5 lg:grid-cols-3 gap-x-9">
+      <section class="grid w-5/6 grid-cols-1 mx-auto mt-5 lg:grid-cols-3 gap-x-9">
         <main class="col-span-2">
           <!-- about me -->
           <section class="mt-5 lg:mt-0">        
@@ -99,12 +99,106 @@
                 <span id="dots">...</span>
               </p>
               <div id="more" class="hidden">
-                <p class="">The more I learned JavaScript, the more I became obsessed with this language and its capabilities. So, I decided to continue my professional journey with this language.</p>
-                <p>I’m passionate about problem-solving, team collaboration and being in a learning environment.</p>
+                <p class="mt-2">The more I learned JavaScript, the more I became obsessed with this language and its capabilities. So, I decided to continue my professional journey with this language.</p>
+                <p class="my-2">I’m passionate about problem-solving, team collaboration and being in a learning environment.</p>
                 <p>I see technology as more than a career path; it's the future I'm eager to help shape. My goal is not just to fill a position but to find a community where I can continue to grow, tackle meaningful projects, and leave a lasting impact.</p>
-                <p>With a foundation in science and a growing expertise in technology, I am driven to merge these worlds, leveraging my skills to contribute to innovations that matter.</p>
-                <p>On the personal front, I love to read, explore new places and do the things that I fear the most.</p>
-                <p class="">I'm on a quest for opportunities that challenge me, expand my horizons, and allow me to contribute to exciting projects. If you're interested in collaborating, exploring new technologies, or discussing potential opportunities, I'd love to connect. Let's envision and build the future together.</p>
+                <p class="my-2">With a foundation in science and a growing expertise in technology, I am driven to merge these worlds, leveraging my skills to contribute to innovations that matter.</p>
+                <p class="mb-2">On the personal front, I love to read, explore new places and do the things that I fear the most.</p>
+                <p>I'm on a quest for opportunities that challenge me, expand my horizons, and allow me to contribute to exciting projects. If you're interested in collaborating, exploring new technologies, or discussing potential opportunities, I'd love to connect. Let's envision and build the future together.</p>
+                <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+                  <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300">
+                      <li class="me-2" role="presentation">
+                          <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="work-tab" data-tabs-target="#work" type="button" role="tab" aria-controls="work" aria-selected="false">work</button>
+                      </li>
+                      <li role="presentation">
+                          <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="education-tab" data-tabs-target="#education" type="button" role="tab" aria-controls="education" aria-selected="false">education</button>
+                      </li>
+                  </ul>
+                </div>
+                <div id="default-tab-content">
+                  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-900" id="work" role="tabpanel" aria-labelledby="work-tab">
+                    <section class="flex justify-start">
+                      <div class="w-80">
+                        <ul>
+                          <li class="relative flex items-baseline gap-6 pb-5">
+                            <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="bi bi-circle-fill fill-gray-400" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="text-sm text-gray-400">18-8-2022</p>
+                              <p class="mt-2 text-sm text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores incidunt blanditiis dignissimos, enim earum mollitia.</p>
+                            </div>
+                          </li>
+                          <li class="relative flex items-baseline gap-6 pb-5">
+                            <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="bi bi-circle-fill fill-gray-400" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="text-sm text-gray-400">18-8-2022</p>
+                              <p class="mt-2 text-sm text-gray-400">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                          </li>
+                          <li class="relative flex items-baseline gap-6 pb-5">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="bi bi-circle-fill fill-gray-400" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="text-sm text-gray-400">18-8-2022</p>
+                              <p class="mt-2 text-sm text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est?</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-900" id="education" role="tabpanel" aria-labelledby="education-tab">
+                    <section class="flex justify-start">
+                      <div class="w-80">
+                        <ul>
+                          <li class="relative flex items-baseline gap-6 pb-5">
+                            <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="bi bi-circle-fill fill-gray-400" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="text-sm text-gray-400">18-8-2022</p>
+                              <p class="mt-2 text-sm text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores incidunt blanditiis dignissimos, enim earum mollitia.</p>
+                            </div>
+                          </li>
+                          <li class="relative flex items-baseline gap-6 pb-5">
+                            <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="bi bi-circle-fill fill-gray-400" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="text-sm text-gray-400">18-8-2022</p>
+                              <p class="mt-2 text-sm text-gray-400">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                          </li>
+                          <li class="relative flex items-baseline gap-6 pb-5">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="bi bi-circle-fill fill-gray-400" viewBox="0 0 16 16">
+                                <circle cx="8" cy="8" r="8" />
+                              </svg>
+                            </div>
+                            <div>
+                              <p class="text-sm text-gray-400">18-8-2022</p>
+                              <p class="mt-2 text-sm text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est?</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                  </div>
+                </div>
               </div>
             </div>
             <button id="toggleReadMore" type="button" class="mt-5 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Read more</button>
@@ -155,9 +249,11 @@
           </section>
         </main>
         <aside>
+          <h2 class="mb-5 font-bold">Contact me</h2>
+          <!-- contact form -->
           <form class="sticky top-2" id="contact_form">
             <div>
-                <label for="user_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">display name</label>
+                <label for="user_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Display name</label>
                 <input name="user_name" type="text" id="user_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required />
             </div>
             <div class="my-5">
@@ -169,7 +265,7 @@
               <input type="text" id="subject" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required />
             </div>
             <div class="my-5">
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">message</label>
+              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
               <textarea name="message" id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
             </div>
             <button id="submitBtn" type="submit" class="mt-5 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Submit</button>
@@ -178,7 +274,7 @@
       </section>
     </section>
     <footer class="my-10 text-center">
-      <p>2024 - Ali nazari &copy;</p>
+      <p><span id="year"></span> - Ali nazari &copy;</p>
     </footer>
     <script src="
       https://cdn.jsdelivr.net/npm/sweetalert2@11.12.1/dist/sweetalert2.all.min.js
