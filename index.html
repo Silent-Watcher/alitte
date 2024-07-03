@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark" dir="ltr">
+<html lang="en" class="dark" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -122,7 +122,7 @@
                         <ul>
                           <li class="relative flex items-baseline gap-6 pb-5">
                             <div class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-gray-400 rtl:before:right-[5.5px]">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="bi bi-circle-fill fill-gray-400" viewBox="0 0 16 16">
+                              <svg  xmlns="http://www.w3.org/2000/svg" width="12" height="12" class="bi bi-circle-fill fill-gray-400" viewBox="0 0 16 16">
                                 <circle cx="8" cy="8" r="8" />
                               </svg>
                             </div>
@@ -222,7 +222,11 @@
           <h2 class="flex items-center mb-5 font-bold">
             <span>Contact me</span>
             <div class="flex items-center ml-auto rtl:mr-auto">
-              <img class="rtl:order-last" width="60px" src="/human-1.svg" alt="human">
+              <div id="tooltip-light" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
+                Hi ! 😏
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+              <img class="rtl:order-last" width="60px" src="/human-1.svg" alt="human" data-tooltip-target="tooltip-light" data-tooltip-style="light">
               <img width="50px" src="/human-2.svg" alt="human">
             </div>
           </h2>
