@@ -3,9 +3,10 @@ let toggle = document.querySelector('#toggleReadMore'),
   dots = document.querySelector('#dots'),
   isExpanded = true;
 let PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-const submitBtn = document.querySelector('#submitBtn')
 let year = document.getElementById('year');
 
+const submitLoader = document.querySelector('#loader');
+const submitTxt = document.querySelector('#submitTxt');
 
 const Toast = Swal.mixin({
   toast: true,
@@ -33,30 +34,32 @@ emailjs.init({
 });
 
 window.addEventListener('load', () => {
-
   year.innerHTML = new Date().getFullYear();
 
   document
     .querySelector('#contact_form')
     .addEventListener('submit', function (e) {
-      submitBtn.innerText = 'Loading ...'
+      submitLoader.classList.replace('hidden', 'inline');
+      submitTxt.innerText = 'loading...';
       e.preventDefault();
-
       emailjs
         .sendForm('contact_service', ' contact_form', this)
         .then(() => {
           // send reply email
-          emailjs.send("contact_service","reply_form",{
-            user_name: document.querySelector('#user_name').value,
-            from_name: "Ali nazari",
-            user_email: document.querySelector('#email').value,
-          }).then(()=>{
-            Toast.fire({
-              icon: 'success',
-              title: 'Email sent successfully 😎',
+          emailjs
+            .send('contact_service', 'reply_form', {
+              user_name: document.querySelector('#user_name').value,
+              from_name: 'Ali nazari',
+              user_email: document.querySelector('#email').value,
+            })
+            .then(() => {
+              Toast.fire({
+                icon: 'success',
+                title: 'Email sent successfully 😎',
+              });
+              submitLoader.classList.replace('inline', 'hidden');
+              submitTxt.innerText = 'Submit';
             });
-            submitBtn.innerText = 'Submit'
-          });
           // cleaning the form
           document.querySelectorAll('input').forEach((input) => {
             input.value = null;
@@ -70,7 +73,4 @@ window.addEventListener('load', () => {
           });
         });
     });
-
-  
 });
-
