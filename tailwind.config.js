@@ -8,6 +8,9 @@ export default {
         center: true,
         padding: '1rem',
       },
+      colors:{
+        "dark-bg" : '#12141A'
+      }
     },
   },
   plugins: [],
