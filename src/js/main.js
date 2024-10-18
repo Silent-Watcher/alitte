@@ -7,6 +7,9 @@ let year = document.getElementById('year');
 
 const submitLoader = document.querySelector('#loader');
 const submitTxt = document.querySelector('#submitTxt');
+const iframe = document.querySelector('#soundCloud-iframe');
+const travoltaDancing = document.querySelector('#travolta-dancing');
+const failedIframeLoadMsg = document.querySelector('#iframe-failed-msg')
 
 const Toast = Swal.mixin({
   toast: true,
@@ -34,6 +37,7 @@ emailjs.init({
 });
 
 window.addEventListener('load', () => {
+  // update the copy right section year dynamically 
   year.innerHTML = new Date().getFullYear();
 
   document
@@ -73,4 +77,19 @@ window.addEventListener('load', () => {
           });
         });
     });
-});
+
+    fetch('https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1394781433&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false',{
+      mode: 'no-cors'
+    })
+      .then((response) => {
+          iframe.classList.remove('hidden');
+          travoltaDancing.src = '/dancin.gif'
+          failedIframeLoadMsg.classList.replace('flex' , 'hidden')
+        })
+        .catch(error =>{
+          console.log('error: ', error);
+          failedIframeLoadMsg.classList.replace('hidden' , 'flex')
+          iframe.classList.add('hidden')
+         travoltaDancing.src = '/waiting.gif'
+      })
+  });
