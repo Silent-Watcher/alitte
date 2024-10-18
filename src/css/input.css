@@ -3,4 +3,8 @@
 @tailwind utilities;
 
 
-
+.driver-popover.driverjs-theme {
+    background-color: #14171f;
+    color: #f5f5f5;
+  }
+  

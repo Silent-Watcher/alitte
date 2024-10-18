@@ -1,3 +1,6 @@
+import { driver } from "driver.js";
+import "driver.js/dist/driver.css";
+
 let toggle = document.querySelector('#toggleReadMore'),
   more = document.querySelector('#more'),
   dots = document.querySelector('#dots'),
@@ -73,8 +76,14 @@ window.addEventListener('load', () => {
         .catch((error) => {
           Toast.fire({
             icon: 'error',
-            title: error.message,
+            title: 'failed to send email! try again',
           });
+          submitLoader.classList.replace('inline', 'hidden');
+          submitTxt.innerText = 'Submit';
+          document.querySelectorAll('input').forEach((input) => {
+            input.value = null;
+          });
+          document.querySelector('textarea').value = null;
         });
     });
 
@@ -92,4 +101,21 @@ window.addEventListener('load', () => {
           iframe.classList.add('hidden')
          travoltaDancing.src = '/waiting.gif'
       })
+
+
+          // start the app tour
+    const driverObj = driver({
+      popoverClass: 'driverjs-theme',
+      showProgress: true,
+      showButtons: ['next', 'previous'],
+      steps: [
+        { element: 'h1', popover: { title: 'Welcome! 🥹', description: 'wait wait Let me introduce myself My name is...' }},
+        { element: '#resume', popover: { title: 'My History', description: 'you can find my resume here', side: "bottom", align: 'start' }},
+        { element: '#blog-section', popover: { title: 'my writings', description: 'you can check some of my writings if you are interested!', side: "bottom", align: 'start' }},
+        { element: '#music', popover: { title: '🕺', description: 'forget about work let\'s hear music ', side: "bottom", align: 'start' }},
+        { element: '#contact_form', popover: { title: 'Let\'s connect!', description: 'send me good energy , song recommendation or possible working opportunities', side: "bottom", align: 'start' }},
+        { element: '#buy-me-coffee', popover: { title: 'Coffee!', description: ':) 💸', side: "bottom", align: 'start' }},
+      ]
+    });
+    driverObj.drive();
   });
