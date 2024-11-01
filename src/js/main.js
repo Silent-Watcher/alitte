@@ -10,9 +10,7 @@ let year = document.getElementById('year');
 
 const submitLoader = document.querySelector('#loader');
 const submitTxt = document.querySelector('#submitTxt');
-const iframe = document.querySelector('#soundCloud-iframe');
-const travoltaDancing = document.querySelector('#travolta-dancing');
-const failedIframeLoadMsg = document.querySelector('#iframe-failed-msg')
+const isVisited = localStorage.getItem('visited') ?? false
 
 const Toast = Swal.mixin({
   toast: true,
@@ -40,6 +38,8 @@ emailjs.init({
 });
 
 window.addEventListener('load', () => {
+
+
   // update the copy right section year dynamically 
   year.innerHTML = new Date().getFullYear();
 
@@ -87,23 +87,7 @@ window.addEventListener('load', () => {
         });
     });
 
-    fetch('https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1394781433&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false',{
-      mode: 'no-cors'
-    })
-      .then((response) => {
-          iframe.classList.remove('hidden');
-          travoltaDancing.src = '/dancin.gif'
-          failedIframeLoadMsg.classList.replace('flex' , 'hidden')
-        })
-        .catch(error =>{
-          console.log('error: ', error);
-          failedIframeLoadMsg.classList.replace('hidden' , 'flex')
-          iframe.classList.add('hidden')
-         travoltaDancing.src = '/waiting.gif'
-      })
-
-
-          // start the app tour
+    // start the app tour
     const driverObj = driver({
       popoverClass: 'driverjs-theme',
       showProgress: true,
@@ -112,10 +96,13 @@ window.addEventListener('load', () => {
         { element: 'h1', popover: { title: 'Welcome! 🥹', description: 'wait wait Let me introduce myself My name is...' }},
         { element: '#resume', popover: { title: 'My History', description: 'you can find my resume here', side: "bottom", align: 'start' }},
         { element: '#blog-section', popover: { title: 'my writings', description: 'you can check some of my writings if you are interested!', side: "bottom", align: 'start' }},
-        { element: '#music', popover: { title: '🕺', description: 'forget about work let\'s hear music ', side: "bottom", align: 'start' }},
         { element: '#contact_form', popover: { title: 'Let\'s connect!', description: 'send me good energy , song recommendation or possible working opportunities', side: "bottom", align: 'start' }},
         { element: '#buy-me-coffee', popover: { title: 'Coffee!', description: ':) 💸', side: "bottom", align: 'start' }},
       ]
     });
-    driverObj.drive();
+    
+    console.log('isVisited: ', isVisited);
+    if(isVisited == false)
+      driverObj.drive();
+      localStorage.setItem('visited' , 'true')
   });

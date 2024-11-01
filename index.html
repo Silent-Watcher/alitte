@@ -22,23 +22,31 @@
         <section class="col-span-2">
           <p class="text-lg">Hi 👋🏻 , I'm</p>
           <div class="flex">
-            <h1 class="flex items-center text-3xl font-bold">
-              <span class="mr-4 rtl:ml-4">Ali nazari</span>
-              <img
-                class="rtl:-scale-x-100"
-                width="50px"
-                src="/astronautCat.gif"
-                alt="cat"
-                title="veeeey !"
-              />
+            <h1 class="flex items-center justify-between w-full text-3xl font-bold">
+              <div class="flex items-center">
+                <span class="mr-4 rtl:ml-4">Ali nazari</span>
+                <img
+                  class="rtl:-scale-x-100"
+                  width="50px"
+                  src="/astronautCat.gif"
+                  alt="cat"
+                  title="veeeey !"
+                />
+              </div>
+              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
             </h1>
           </div>
           <p class="mt-5 text-gray-400">
-            I'm a Software Engineer building full-stack web applications with
-            Svelte , Node.js, TypeScript,
+            I'm a Software Developer building web applications with
+            Node.js,
           </p>
           <p class="text-gray-400">
-            and PostgreSQL. I like to hang out in
+            I like to hang out in
             <a
               class="text-blue-500"
               href="https://discordapp.com/users/1047559485964681369"
@@ -82,11 +90,27 @@
             <span class="ml-2">Resume</span>
           </a>
         </section>
+
         <!-- tools and tech -->
-        <section class="w-full mt-10 text-center">
-          <h2 class="mb-5">Tools and tech</h2>
-          <section class="flex flex-col items-center justify-center w-full">
-            <div class="flex flex-wrap justify-around w-full">
+        <section class="w-full mt-5 text-center">
+          <!-- navbar -->
+          <nav>
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
+              <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+                  <li>
+                    <a href="/" class="block py-2 px-3 text-white rounded md:bg-transparent md:p-0" aria-current="page">/</a>
+                  </li>
+                  <li>
+                    <a href="/blog" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">/Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <h2 class="mt-0 lg:mt-20  mb-5">Tools and tech</h2>
+          <section class="flex flex-col items-center justify-center w-full mx-auto">
+            <div class="flex flex-wrap justify-around w-full md:w-1/3 lg:w-3/4">
               <img
                 loading="lazy"
                 src="/typescript.svg"
@@ -117,88 +141,88 @@
                 alt="express"
                 title="express js"
               />
-              <img
+              <!-- <img
                 loading="lazy"
                 src="/elasticsearch.svg"
                 alt="elasticsearch"
                 title="elasticsearch"
-              />
-              <img
+              /> -->
+              <!-- <img
                 loading="lazy"
                 src="/mongodb.svg"
                 alt="mongodb"
                 title="mongodb"
-              />
-              <img
+              /> -->
+              <!-- <img
                 loading="lazy"
                 src="/postgresql.svg"
                 alt="postgresql"
                 title="postgresql"
-              />
-              <img loading="lazy" src="/redis.svg" alt="redis" title="redis" />
-              <img
+              /> -->
+              <!-- <img loading="lazy" src="/redis.svg" alt="redis" title="redis" /> -->
+              <!-- <img
                 loading="lazy"
                 src="/graphql.svg"
                 alt="graphql"
                 title="graphql"
-              />
-              <img
-                loading="lazy"
-                src="/svelte.svg"
-                alt="svelte"
-                title="svelte"
-              />
+              /> -->
             </div>
-            <div class="flex flex-wrap justify-around w-full mt-4">
-              <img loading="lazy" src="/grpc.svg" alt="grpc" title="grpc" />
-              <img
+            <div class="flex flex-wrap justify-center w-full mt-4">
+              <!-- <img
+              loading="lazy"
+              src="/svelte.svg"
+              alt="svelte"
+              title="svelte"
+              /> -->
+              <!-- <img loading="lazy" src="/grpc.svg" alt="grpc" title="grpc" /> -->
+              <!-- <img
                 loading="lazy"
                 src="/rabbitmq.svg"
                 alt="rabbitmq"
                 title="rabbitmq"
-              />
-              <img
+              /> -->
+              <!-- <img
                 loading="lazy"
                 src="/apachekafka.svg"
                 alt="apachekafka"
                 title="apachekafka"
-              />
-              <img
+              /> -->
+              <!-- <img
                 loading="lazy"
                 src="/socket.svg"
                 alt="socket"
                 title="socket"
-              />
-              <img
+              /> -->
+              <!-- <img
                 loading="lazy"
                 src="/prisma.svg"
                 alt="prisma"
                 title="prisma"
-              />
-              <img
+              /> -->
+              <!-- <img
                 loading="lazy"
                 src="/sequelize.svg"
                 alt="sequelize"
                 title="sequelize"
-              />
-              <img
+              /> -->
+              <!-- <img
                 loading="lazy"
                 src="/fastify.svg"
                 alt="fastify"
                 title="fastify"
-              />
-              <img
+              /> -->
+              <!-- <img
                 loading="lazy"
                 src="/tailwindcss.svg"
                 alt="tailwindcss"
                 title="tailwindcss"
-              />
-              <img
+              /> -->
+              <!-- <img
                 loading="lazy"
                 src="/swagger.svg"
                 alt="swagger"
                 title="swagger"
-              />
+              /> -->
             </div>
           </section>
         </section>
@@ -662,7 +686,7 @@
             </div>
           </h2>
           <!-- contact form -->
-          <form class="sticky top-2" id="contact_form">
+          <form class="sticky top-32" id="contact_form">
             <div>
               <label
                 for="user_name"
@@ -759,14 +783,6 @@
               <a  data-tooltip-target="tooltip-coffee" id="buy-me-coffee"
               data-tooltip-style="light" target="_blank" href="http://www.coffeete.ir/silentwatcher" class="inline-flex items-center ml-auto"><img src="/buymeacoffee.svg" alt="buy me a coffee"></a>
             </div>
-            <!-- music section start -->
-            <h2 class="mt-10 mb-4 font-bold">Music</h2>
-            <section class="relative" id="music">
-              <img class=" w-20 md:w-36 absolute right-0 md:-right-12 top-0 z-10" loading="lazy" src="/dancin.gif" alt="dancing" id="travolta-dancing">
-              <p id="iframe-failed-msg" class="text-xs text-red-300 font-bold flex flex-col"><span>proxy required! 🤔</span> <span class="mt-2 text-red-100">it seams that sound cloud blocked your country 🌍</span></p>
-              <iframe id="soundCloud-iframe" title="music" class="rounded-2xl" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1394781433&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
-            </section>
-            <!-- music section end -->
           </form>
         </aside>
       </section>
