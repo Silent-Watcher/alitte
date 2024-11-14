@@ -23,7 +23,7 @@ const Toast = Swal.mixin({
     toast.onmouseleave = Swal.resumeTimer;
   },
 });
-
+// comment for testing
 toggle.onclick = toggleReadMore;
 
 function toggleReadMore() {
